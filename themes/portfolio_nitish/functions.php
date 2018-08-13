@@ -122,6 +122,9 @@ add_action( 'widgets_init', 'portfolio_nitish_widgets_init' );
 function portfolio_nitish_scripts() {
 	wp_enqueue_style( 'portfolio_nitish-style', get_stylesheet_uri() );
 
+	wp_enqueue_script('jquery', get_template_directory_uri() .'/js/general.js', array('jquery'), null, true);
+
+
 	wp_enqueue_script( 'portfolio_nitish-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'portfolio_nitish-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
