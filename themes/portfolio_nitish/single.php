@@ -14,18 +14,24 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		while ( have_posts() ) : the_post(); ?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			<h1 class="story-single-title"><?php the_title(); ?></h1>
+			<div class="story-single-content"><?php the_content(); ?></div>
+			<div class="story-img-collage">
+				<img class="story-img-single img-1" src=<?php echo CFS()->get('photo_1'); ?> />
+				<img class="story-img-single img-2" src=<?php echo CFS()->get('photo_2'); ?> />
+				<img class="story-img-single img-3" src=<?php echo CFS()->get('photo_3'); ?> />
+				<img class="story-img-single img-4" src=<?php echo CFS()->get('photo_4'); ?> />
+				<img class="story-img-single img-5" src=<?php echo CFS()->get('photo_5'); ?> />
+				<img class="story-img-single img-6" src=<?php echo CFS()->get('photo_6'); ?> />
+				<img class="story-img-single img-7" src=<?php echo CFS()->get('photo_7'); ?> />
+				<img class="story-img-single img-8" src=<?php echo CFS()->get('photo_8'); ?> />
+			</div>
 
-			the_post_navigation();
+			<?php the_post_navigation(); ?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
+		<?php	
 		endwhile; // End of the loop.
 		?>
 
@@ -33,5 +39,4 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

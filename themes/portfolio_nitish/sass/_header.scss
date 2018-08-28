@@ -1,4 +1,119 @@
-body {
-    color: blue;
-    background: red;
+#wpadminbar {
+    display: none;
+}
+
+header {
+    font-family: $abel;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -2%;
+}
+
+.black-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.skip-link {
+    display: none;
+}
+
+.logo {
+    background: url("assets/NW_logo_small_yellow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 8%;
+    width: 5%;
+    position: absolute;
+    left: 47.5%;
+    right: 47.5%;
+    top: 4%;
+    display: none;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-menu-1-container {
+    z-index: 1001;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+    
+        li {
+            text-transform: lowercase;
+
+            &:after {
+                content: "/";
+                padding: 0 10px;
+                color: white;
+                text-decoration: none;                
+            }
+
+            &:last-of-type:after {
+                content: "";
+            }
+            
+
+            a {
+                color: white;
+            }
+        }
+
+        .current_page_item {
+            text-decoration: line-through;
+        }
+    }
+}
+
+.menu-button {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    font-family: $abel;
+    padding: 0;
+    margin: 0;
+
+    i {
+        font-size: .8rem;
+    }
+}
+
+.menu-close {
+    z-index: 1001;
+}
+
+.fa-times {
+    color: white;
+    padding-right: 10px;
+}
+
+
+.work-with-me {
+    color: black;
+    font-family: $abel;
+    padding-top: 10px;
+    
+
+    &:before {
+        content: "—";
+        
+    }
 }

@@ -1,0 +1,94 @@
+.home {
+    background-image: url("assets/bg_image_cover.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .site-info {
+        display: none;
+    }
+
+    .menu-button {
+        color: white;
+    }
+
+    .work-with-me {
+        color: white;
+    }
+
+    .logo {
+        display: block;
+    }
+
+}
+
+.headers-div {
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: .5%;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.photo-header, .ux-header {
+    color: white;
+    font-family: $bebas;
+    font-weight: 300;
+    font-size: 4rem;
+
+    &:hover {
+        color: lightgray;
+    }
+}
+
+.photo-header {
+    
+    &:after {
+        content: "—";
+    }
+}
+
+.ux-header {
+
+    &:before {
+        content: "—";
+    }
+}
+
+.ux-ol, .photo-ol {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    top: 0;
+}
+
+.ux-ol {
+    left: 0;
+}
+
+.photo-ol {
+    right: 0;
+}
+
+.black-section-ux, .black-section-photo {
+    width: 30%;
+    background: rgba(0,0,0,.9);
+}
+
+.ux-pic, .photo-pic {
+    height: 100%;
+    width: 70%;
+}
+
+

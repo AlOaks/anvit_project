@@ -1,0 +1,36 @@
+#n2-ss-3-align {
+    width: 70%;
+    height: 35%;
+}
+.filter-box {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.filter-title {
+    font-family: $abel;
+    font-size: 1.1rem;
+    text-align: left;
+    width: 40px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.filter {
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-family: $abel;
+    font-size: 1.1rem;
+    color: gray;
+    text-align: left;
+    padding: 0;
+
+    &:focus {
+        color: black;
+        text-decoration: line-through;
+        outline: none;
+    }
+}

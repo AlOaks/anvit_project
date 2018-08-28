@@ -1,3 +1,555 @@
-body {
-  color: blue;
-  background: red; }
+@charset "UTF-8";
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("assets/fonts/bebas/BebasNeueRegular.eot");
+  src: url("assets/fonts/bebas/BebasNeueRegular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/bebas/BebasNeueRegular.woff2") format("woff2"), url("assets/fonts/bebas/BebasNeueRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("assets/fonts/bebas/BebasNeueBold.eot");
+  src: url("assets/fonts/bebas/BebasNeueBold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/bebas/BebasNeueBold.woff2") format("woff2"), url("assets/fonts/bebas/BebasNeueBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Bebas Neue Book';
+  src: url("assets/fonts/bebas/BebasNeueBook.eot");
+  src: url("assets/fonts/bebas/BebasNeueBook.eot?#iefix") format("embedded-opentype"), url("assets/fonts/bebas/BebasNeueBook.woff2") format("woff2"), url("assets/fonts/bebas/BebasNeueBook.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("assets/fonts/bebas/BebasNeueLight.eot");
+  src: url("assets/fonts/bebas/BebasNeueLight.eot?#iefix") format("embedded-opentype"), url("assets/fonts/bebas/BebasNeueLight.woff2") format("woff2"), url("assets/fonts/bebas/BebasNeueLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("assets/fonts/bebas/BebasNeue-Thin.eot");
+  src: url("assets/fonts/bebas/BebasNeue-Thin.eot?#iefix") format("embedded-opentype"), url("assets/fonts/bebas/BebasNeue-Thin.woff2") format("woff2"), url("assets/fonts/bebas/BebasNeue-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Abel';
+  src: url("assets/fonts/abel/Abel-Regular.eot");
+  src: url("assets/fonts/abel/Abel-Regular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/abel/Abel-Regular.woff2") format("woff2"), url("assets/fonts/abel/Abel-Regular.woff") format("woff"), url("assets/fonts/abel/Abel-Regular.ttf") format("truetype"), url("assets/fonts/abel/Abel-Regular.svg#Abel-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+#wpadminbar {
+  display: none; }
+
+header {
+  font-family: "Abel";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -2%; }
+
+.black-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  top: 0;
+  left: 0; }
+
+.skip-link {
+  display: none; }
+
+.logo {
+  background: url("assets/NW_logo_small_yellow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 8%;
+  width: 5%;
+  position: absolute;
+  left: 47.5%;
+  right: 47.5%;
+  top: 4%;
+  display: none; }
+
+.main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.menu-menu-1-container {
+  z-index: 1001; }
+  .menu-menu-1-container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .menu-menu-1-container ul li {
+      text-transform: lowercase; }
+      .menu-menu-1-container ul li:after {
+        content: "/";
+        padding: 0 10px;
+        color: white;
+        text-decoration: none; }
+      .menu-menu-1-container ul li:last-of-type:after {
+        content: ""; }
+      .menu-menu-1-container ul li a {
+        color: white; }
+    .menu-menu-1-container ul .current_page_item {
+      text-decoration: line-through; }
+
+.menu-button {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-family: "Abel";
+  padding: 0;
+  margin: 0; }
+  .menu-button i {
+    font-size: .8rem; }
+
+.menu-close {
+  z-index: 1001; }
+
+.fa-times {
+  color: white;
+  padding-right: 10px; }
+
+.work-with-me {
+  color: black;
+  font-family: "Abel";
+  padding-top: 10px; }
+  .work-with-me:before {
+    content: "—"; }
+
+.home {
+  background-image: url("assets/bg_image_cover.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .home .site-info {
+    display: none; }
+  .home .menu-button {
+    color: white; }
+  .home .work-with-me {
+    color: white; }
+  .home .logo {
+    display: block; }
+
+.headers-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 99%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: .5%; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+.photo-header, .ux-header {
+  color: white;
+  font-family: "Bebas Neue";
+  font-weight: 300;
+  font-size: 4rem; }
+  .photo-header:hover, .ux-header:hover {
+    color: lightgray; }
+
+.photo-header:after {
+  content: "—"; }
+
+.ux-header:before {
+  content: "—"; }
+
+.ux-ol, .photo-ol {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0; }
+
+.ux-ol {
+  left: 0; }
+
+.photo-ol {
+  right: 0; }
+
+.black-section-ux, .black-section-photo {
+  width: 30%;
+  background: rgba(0, 0, 0, 0.9); }
+
+.ux-pic, .photo-pic {
+  height: 100%;
+  width: 70%; }
+
+#n2-ss-2-align {
+  width: 65%;
+  height: 40%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.nextend-bullet-bar {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important; }
+
+.site-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  height: 5%; }
+
+.logo-left {
+  background: url("assets/NW_logo_black.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 50px; }
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0; }
+  .social-links li {
+    list-style-type: none;
+    padding-right: 15px; }
+  .social-links a {
+    color: black; }
+    .social-links a:hover {
+      color: black; }
+
+.page-template-page-about {
+  font-family: "Bebas Neue"; }
+  .page-template-page-about .site-info {
+    position: absolute;
+    bottom: -3%;
+    left: 2.5%; }
+
+.about-content {
+  font-family: "Abel";
+  width: 50%;
+  position: absolute;
+  top: 37%;
+  left: 8%;
+  color: #5a5a5a; }
+
+.title-about {
+  font-size: 7rem;
+  position: absolute;
+  letter-spacing: 18px;
+  top: 5%;
+  left: 23%; }
+
+.about-nitish {
+  color: #5a5a5a;
+  position: absolute;
+  text-transform: uppercase;
+  font-family: "Abel";
+  font-size: 1rem;
+  top: 31%;
+  left: 23.5%; }
+
+.about-image {
+  width: 28%;
+  position: absolute;
+  top: 13%;
+  right: 8%;
+  z-index: -1; }
+  .about-image img {
+    width: 100%; }
+
+#n2-ss-3-align {
+  width: 70%;
+  height: 35%; }
+
+.filter-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 15%; }
+
+.filter-title {
+  font-family: "Abel";
+  font-size: 1.1rem;
+  text-align: left;
+  width: 40px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+  margin-bottom: 5px; }
+
+.filter {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-family: "Abel";
+  font-size: 1.1rem;
+  color: gray;
+  text-align: left;
+  padding: 0; }
+  .filter:focus {
+    color: black;
+    text-decoration: line-through;
+    outline: none; }
+
+.page-template-page-work-with-me .wpcf7-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.page-template-page-work-with-me .info-area {
+  width: 25%;
+  margin-left: 5%;
+  margin-top: 10%;
+  font-family: "Abel"; }
+
+.page-template-page-work-with-me .to-email span {
+  font-weight: bold; }
+
+.page-template-page-work-with-me .items-description {
+  list-style-type: none;
+  position: absolute;
+  font-family: "Abel";
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  left: 5.5%;
+  top: 220px; }
+  .page-template-page-work-with-me .items-description li {
+    margin-bottom: 11%;
+    height: 65px;
+    overflow: scroll; }
+    .page-template-page-work-with-me .items-description li:nth-of-type(2) {
+      margin-bottom: 8%;
+      height: 85px; }
+    .page-template-page-work-with-me .items-description li:nth-of-type(3) {
+      margin-bottom: 14%;
+      height: 50px; }
+
+.page-template-page-work-with-me .wpcf7-text, .page-template-page-work-with-me .wpcf7-textarea {
+  border-top: none;
+  border-left: none;
+  border-right: none; }
+
+.page-template-page-work-with-me .wpcf7-textarea {
+  height: 50px; }
+
+.page-template-page-work-with-me .list-collab {
+  width: 65%;
+  border-right: 1px solid grey; }
+
+.page-template-page-work-with-me .wpcf7-list-item-label {
+  font-size: 1.5rem; }
+
+.page-template-page-work-with-me .wwm-title {
+  margin-left: 5%;
+  font-family: "Abel";
+  text-transform: uppercase;
+  color: grey;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.page-template-page-work-with-me .look {
+  margin-bottom: -10px; }
+
+.page-template-page-work-with-me .collab {
+  color: #e6e6e6;
+  font-size: 4rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  letter-spacing: 10px; }
+
+.page-template-page-work-with-me .wm {
+  margin-top: -10px;
+  margin-left: 75%; }
+
+.page-template-page-work-with-me .collaboration-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Bebas Neue"; }
+
+.page-template-page-work-with-me input[type="radio"] {
+  margin-bottom: 15%; }
+
+.page-template-page-work-with-me input[type="submit"] {
+  border: none;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-family: "Bebas Neue";
+  font-size: 1.2rem;
+  font-weight: bold; }
+  .page-template-page-work-with-me input[type="submit"]:focus {
+    border: none; }
+
+.stories-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  float: right;
+  margin-bottom: 40px;
+  margin-right: 0px; }
+
+.story-wrapper {
+  width: 32.5%;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin: 5px;
+  overflow: hidden; }
+
+.story-img {
+  width: 100%;
+  height: 250px; }
+
+.story-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  position: absolute;
+  top: 0; }
+
+.story-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -27px;
+  width: 300px;
+  height: 54px;
+  text-align: center;
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  z-index: 2; }
+
+.story-single-title {
+  font-family: "Bebas Neue";
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+.story-single-content {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Abel"; }
+
+.story-img-collage {
+  width: 90.5%;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.story-img-single {
+  width: 32.5%;
+  margin: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 auto;
+          flex: 1 auto; }
+
+.single .post-navigation {
+  font-family: "Abel";
+  margin-left: 5%; }
