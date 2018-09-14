@@ -44,10 +44,14 @@ a {
     color: white;
     font-family: $bebas;
     font-weight: 300;
-    font-size: 4rem;
+    font-size: 2rem;
 
     &:hover {
         color: lightgray;
+    }
+
+    @include desktop {
+        font-size: 4rem;
     }
 }
 
@@ -69,16 +73,23 @@ a {
     width: 100%;
     height: 100%;
     position: absolute;
-    display: flex;
+    display: none;
     top: 0;
+    z-index: -1;
+
+    @include desktop {
+        display: flex;
+    }
+    
 }
 
 .ux-ol {
     left: 0;
+
 }
 
 .photo-ol {
-    right: 0;
+    right: 0;   
 }
 
 .black-section-ux, .black-section-photo {
@@ -89,6 +100,12 @@ a {
 .ux-pic, .photo-pic {
     height: 100%;
     width: 70%;
+}
+
+.ux-img, .photo-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 

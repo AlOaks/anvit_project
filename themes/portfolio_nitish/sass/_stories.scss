@@ -1,27 +1,67 @@
 .stories-container {
     display: flex;
+    flex-direction: column;
     width: 90%;
+    height: 60vh;
     flex-wrap: wrap;
-    float: right;
-    margin-bottom: 40px;
-    margin-right: 0px;
+    margin: $center;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @include desktop {
+        float: right;
+        margin: 0;
+        height: 80vh;
+    }
+
+}
+
+.single-post {
+    .site-info {
+        position: relative;
+    }
+}
+
+.stories-title {
+    font-size: 3rem;
+    font-family: $bebas;
+    text-align: center;
+    margin: 0;
+
+    @include desktop {
+        display: none;
+    }
 }
 
 
 .story-wrapper {
-    width: 32.5%;
-    height: 250px;
+    width: 60%;
+    height: 45%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     margin: 5px;
     overflow: hidden;
+    flex: 1 auto;
+
+    @include desktop {
+        width: 38%;
+        height: 40%;
+    }
 }
 
 .story-img {
     width: 100%;
-    height: 250px;
+    height: 30vh;
+
+    @include desktop {
+        height: 45vh;
+    }
+
 }
 
 .story-overlay {
@@ -45,10 +85,14 @@
     font-family: $bebas;
     text-transform: uppercase;
     color: white;
-    font-size: 2.8rem;
+    font-size: 1.4rem;
     font-weight: 400;
     margin-bottom: 0;
     z-index: 2;
+
+    @include desktop {
+        font-size: 3rem;
+    }
 }
 
 // SINGLE STORY 
@@ -56,8 +100,7 @@
 .story-single-title {
     font-family: $bebas;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
 }
 
 .story-single-content {
@@ -69,13 +112,17 @@
 
 .story-img-collage {
     width: 90.5%;
-    height: 800px;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
+
+    @include desktop {
+        height: 800px;
+    }
 }
 
 .story-img-single {

@@ -21,10 +21,14 @@ get_header();
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 
-            <h1 class="title-about">Nitish Waila</h1>
-            <h1 class="about-nitish">adventure photographer / mountaineer / UI/UX Designer</h1>
-            <div class="about-content"><?php the_content(); ?></div>
-            <div class="about-image"><?php the_post_thumbnail(); ?></div>
+			<section class="about-hero">
+            	<h1 class="title-about">Nitish Waila</h1>
+				<h1 class="about-nitish">adventure photographer / mountaineer / UI/UX Designer</h1>
+			</section>
+			<section class="about-container">
+            	<div class="about-content"><?php the_content(); ?></div>
+				<div class="about-image"><?php the_post_thumbnail(); ?></div>
+			</section>
         
         <?php
 		endwhile; // End of the loop.

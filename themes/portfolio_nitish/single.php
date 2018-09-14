@@ -19,6 +19,12 @@ get_header();
 			<h1 class="story-single-title"><?php the_title(); ?></h1>
 			<div class="story-single-content"><?php the_content(); ?></div>
 			<div class="story-img-collage">
+
+				<?php 
+					$stories = CFS()->get('StoriesPhotos');				
+				
+				?>
+
 				<img class="story-img-single img-1" src=<?php echo CFS()->get('photo_1'); ?> />
 				<img class="story-img-single img-2" src=<?php echo CFS()->get('photo_2'); ?> />
 				<img class="story-img-single img-3" src=<?php echo CFS()->get('photo_3'); ?> />

@@ -41,10 +41,29 @@
 	<div class="black-overlay"></div>
 	<div class="ux-ol overlay ">
 		<div class="black-section-ux"></div>
-		<img class="ux-pic" src=<?php echo CFS()->get( 'ux_pic' ); ?> />
+			<?php
+				$args = array('post_type' => 'designs', 'posts_per_page' => 1);
+				$uxquery = new WP_Query($args);
+				while ($uxquery -> have_posts() ) : $uxquery -> the_post();
+			?>
+
+				<a class="ux-pic" href="<?php echo get_page_link(10); ?>" >
+					<img class="ux-img" src=<?php echo get_the_post_thumbnail(); ?> 
+				</a>
+
+			<?php endwhile; ?>
 	</div>
 	<div class="photo-ol overlay">
-		<img class="photo-pic" src=<?php echo CFS()->get( 'photo_pic' ); ?> />
+			<?php
+				$args = array('post_type' => 'photography', 'posts_per_page' => 1);
+				$phoquery = new WP_Query($args);
+				while ($phoquery -> have_posts() ) : $phoquery -> the_post();
+			?>
+			<a class="photo-pic" href=<?php echo get_post_type_archive_link('photography'); ?> >		
+				<img class="photo-img" src=<?php echo get_the_post_thumbnail(); ?>
+			</a>
+
+			<?php endwhile; ?>
 		<div class="black-section-photo"></div>
 	</div>
 	<div id="content" class="site-content">

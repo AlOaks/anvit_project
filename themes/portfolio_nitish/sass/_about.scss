@@ -2,49 +2,93 @@
     font-family: $bebas;
 
     .site-info {
-        position: absolute;
-        bottom: -3%;
-        left: 2.5%;
+        position: relative;
+
+        @include desktop {
+            position: fixed;
+        }
     }
-}
 
-.about-content {
-    
-    font-family: $abel;
-    width: 50%;
-    position: absolute;
-    top: 37%;
-    left: 8%;
-    color: rgb(90, 90, 90);
-    
-}
 
-.title-about{
-    font-size: 7rem;
-    position: absolute;
-    letter-spacing: 18px;
-    top: 5%;
-    left: 23%;
-}
+   
+    .about-hero {
 
-.about-nitish {
-    color: rgb(90, 90, 90);
-    position: absolute;
-    text-transform: uppercase;
-    font-family: $abel;
-    font-size: 1rem;
-    top: 31%;
-    left: 23.5%;
-}
-
-.about-image {
-    width: 28%;
-    position: absolute;
-    top: 13%;
-    right: 8%;
-    z-index: -1;
-
-    img {
-        width: 100%;
+        @include desktop {
+            width: 70%;
+            margin-left: 20%;
+            position: absolute;
+        }
     }
+
+    .title-about {
+        width: 90%;
+        font-size: 3rem;
+        margin: 0;
+
+        @include desktop {
+            font-size: 7rem;
+            letter-spacing: 20px;
+            margin: 0;
+        }
+    }
+
+    .about-nitish {
+        width: 90%;
+        font-size: 1rem;
+        color: gray;
+        font-family: $abel;
+        text-transform: uppercase;
+        margin-top: -2%;
+
+        @include desktop {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin: 0; 
+            margin-top: -3%;
+        }
+    }
+
+    .about-container {
+        width: 90%;
+        margin: $center;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .about-image {
+        width: 30%;
+        img {
+            display: none;
+
+            @include desktop {
+                display: block;
+                width: 100%;
+                height: 80vh;
+            }
+        }
+    }
+
+
+    .about-content { 
+        font-family: $abel;
+
+        @include desktop {
+            width: 60%;
+        }
+        
+        p {
+            width: 100%;
+            color: grey;
+            text-align: justify;
+
+
+            @include desktop {
+                text-align: left;
+            }
+        }
+    }
+
+
 }
+

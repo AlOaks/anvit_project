@@ -15,12 +15,15 @@ get_header();
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 
-			<img class="design-img" src=<?php echo CFS()->get( 'design_image' ); ?> />
+			<div class="photo_img">
+                <?php the_post_thumbnail(); ?>
+            </div>
 
-		<?php
+        <?php
 		endwhile; // End of the loop.
-		?>
+        ?>
 
+        
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

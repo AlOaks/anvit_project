@@ -31,7 +31,7 @@ function designs() {
 		'search_items'          => __( 'Search Design', 'portfolio_nitish' ),
 		'not_found'             => __( 'Not found', 'portfolio_nitish' ),
 		'not_found_in_trash'    => __( 'Not found in Trash', 'portfolio_nitish' ),
-		'featured_image'        => __( 'Design Image', 'portfolio_nitish' ),
+		'featured_image'        => __( 'Cover Image', 'portfolio_nitish' ),
 		'set_featured_image'    => __( 'Set Image', 'portfolio_nitish' ),
 		'remove_featured_image' => __( 'Remove image', 'portfolio_nitish' ),
 		'use_featured_image'    => __( 'Use as image', 'portfolio_nitish' ),
@@ -45,7 +45,7 @@ function designs() {
 		'label'                 => __( 'Design', 'portfolio_nitish' ),
 		'description'           => __( 'The section to upload all your designs', 'portfolio_nitish' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'supports'              => array( 'title', 'thumbnail' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -71,8 +71,8 @@ add_action( 'init', 'designs', 0 );
 function photography_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Photographies', 'Post Type General Name', 'portfolio_nitish' ),
-		'singular_name'         => _x( 'Photograpy', 'Post Type Singular Name', 'portfolio_nitish' ),
+		'name'                  => _x( 'Photos', 'Post Type General Name', 'portfolio_nitish' ),
+		'singular_name'         => _x( 'Photography', 'Post Type Singular Name', 'portfolio_nitish' ),
 		'menu_name'             => __( 'Photography', 'portfolio_nitish' ),
 		'name_admin_bar'        => __( 'Photography', 'portfolio_nitish' ),
 		'archives'              => __( 'Photography Archives', 'portfolio_nitish' ),
@@ -104,7 +104,7 @@ function photography_post_type() {
 		'description'           => __( 'This is the section for the Photography Posts', 'portfolio_nitish' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array(),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

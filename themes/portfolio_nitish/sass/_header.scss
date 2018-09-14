@@ -5,11 +5,11 @@
 header {
     font-family: $abel;
     display: flex;
-    width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-top: -2%;
+
 }
 
 .black-overlay {
@@ -49,29 +49,41 @@ header {
 
     ul {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         list-style-type: none;
         margin: 0;
         padding: 0;
         justify-content: space-between;
+        margin-left: 5%;
+        position: absolute;
+        left: 0;
+
+        @include desktop {
+            flex-direction: row;
+            position: relative;
+            margin-left: 0;
+        }
     
         li {
             text-transform: lowercase;
 
-            &:after {
-                content: "/";
-                padding: 0 10px;
-                color: white;
-                text-decoration: none;                
-            }
-
-            &:last-of-type:after {
-                content: "";
-            }
-            
-
             a {
                 color: white;
+            }
+
+            @include desktop {
+
+                &:after {
+                    content: "/";
+                    padding: 0 10px;
+                    color: white;
+                    text-decoration: none;                
+                }
+    
+                &:last-of-type:after {
+                    content: "";
+                }
+                
             }
         }
 

@@ -1,18 +1,62 @@
-.page-template-page-design {
+.single-designs {
+    .site-info {
+        position: relative;
+    }
+}
 
+.design-title {
+    font-family: $bebas;
+    text-align: center;
+    font-size: 3rem;
+
+    @include desktop {
+        display: none;
+    }
 }
 
 
-#n2-ss-2-align {
-    width: 65%;
-    height: 40%;
-    margin-left: auto;
-    margin-right: auto;
+.design-slider {
+
+    width: 95%;
+    height: 30vh;
+    display: flex;
+    overflow-x: auto;
+    margin: $center;
+
+    @include desktop {
+        max-width: 1000px;
+        height: 80vh;
+    }
+    
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
 }
 
-.nextend-bullet-bar {
+.design-slide {
+    
+    img {
+        position: relative;
+        max-height: 30vh;
+        max-width: 350px;
+        padding: 0 10px 0 10px;
+
+        @include desktop {
+            max-width: 1000px;
+            max-height: 80vh;
+        }
+    }
+}
+
+// SINGLE DESIGN PAGE
+
+.design-img {
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between !important;
+    margin-left: 5%;
+}
+
+.n2-ss-slide-background-image {
+    opacity: 1 !important;
 }

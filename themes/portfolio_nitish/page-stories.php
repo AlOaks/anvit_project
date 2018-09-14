@@ -19,10 +19,10 @@ get_header();
 		<main id="main" class="site-main">
 
             <?php 
-                $args = array('post_type' => 'post', 'posts_per_page' => 6);
+                $args = array('post_type' => 'post', 'posts_per_page' => -1);
                 $story = new WP_query($args);
             ?>
-
+        <h1 class="stories-title">Stories</h1>
         <div class="stories-container">
 
             <?php
