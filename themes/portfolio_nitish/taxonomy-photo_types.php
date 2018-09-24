@@ -31,6 +31,8 @@ get_header();
 						echo '</ul>'; ?>
 				</div>
 			<div class="photos-container">	
+			<button class="photoslider-btn-lft">></button>
+            <button class="photoslider-btn-right"><</button>
 		<?php
 			while ( have_posts() ) : the_post(); ?>
 

@@ -14,7 +14,7 @@ get_header();
 		<main id="main" class="site-main">
 		<?php if ( have_posts() ) : ?>
 		<h1 class="photography-title">Portfolio</h1>
-
+			
 			<section class="photography-body">
 
 				<div class="filter-box">
@@ -32,6 +32,8 @@ get_header();
 						echo '</ul>'; ?>
 				</div>
 			<div class="photos-container">	
+			<button class="photoslider-btn-lft">></button>
+            <button class="photoslider-btn-right"><</button>
 		<?php
 			while ( have_posts() ) : the_post(); ?>
 

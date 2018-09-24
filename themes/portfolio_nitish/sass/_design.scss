@@ -14,18 +14,21 @@
     }
 }
 
-
 .design-slider {
 
     width: 95%;
     height: 30vh;
     display: flex;
     overflow-x: auto;
-    margin: $center;
+    // margin: 0 2.5% 0 2.5%;
+    position: absolute;
+    top: calc(50% - 15vh);
 
     @include desktop {
         max-width: 1000px;
         height: 80vh;
+        position: relative;
+        margin: $center;
     }
     
     
@@ -40,7 +43,7 @@
     img {
         position: relative;
         max-height: 30vh;
-        max-width: 350px;
+        max-width: 370px;
         padding: 0 10px 0 10px;
 
         @include desktop {
@@ -59,4 +62,24 @@
 
 .n2-ss-slide-background-image {
     opacity: 1 !important;
+}
+
+.slider-btn-lft, .slider-btn-right {
+    background: none;
+    color: black;
+    border: none;
+    box-shadow: none;
+    font-family: $abel;
+    font-size: 3rem;
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 1rem);
+}
+
+.slider-btn-lft {
+    right: 0;
+}
+
+.slider-btn-right {
+    left: 0;
 }

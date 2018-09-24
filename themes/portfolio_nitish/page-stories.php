@@ -24,10 +24,10 @@ get_header();
             ?>
         <h1 class="stories-title">Stories</h1>
         <div class="stories-container">
-
+            
             <?php
             while ($story -> have_posts() ) : $story -> the_post(); ?>
-                <a class="story-wrapper"href=<?php the_permalink(); ?> >
+                <a class="story-wrapper" href=<?php the_permalink(); ?> >
                     <div class="story-div">
                         <img class="story-img" src=<?php echo CFS()->get('photo_1'); ?> />
                         <div class="story-overlay"></div>
@@ -37,8 +37,9 @@ get_header();
             <?php
             endwhile; // End of the loop.
             ?>
-
         </div>
+        <input type="range" id="myRange" class="stories-range" max="58" value="0" />
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

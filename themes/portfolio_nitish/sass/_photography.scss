@@ -21,7 +21,7 @@
 
 .photos-container {
     width: 95%;
-    height: 80vh;
+    height: 77vh;
     display: flex;
     overflow-x: auto;
     margin: $center;
@@ -34,17 +34,42 @@
         display: none;
     }
 }
+
+.photoslider-btn-lft, .photoslider-btn-right {
+    background: rgba(0,0,0,.5);
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-family: $abel;
+    font-size: 3rem;
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 3rem);
+
+}
+
+.photoslider-btn-lft {
+    right: 0;
+}
+
+.photoslider-btn-right {
+    left: 0;
+
+    @include desktop {
+        left: 16%;
+    }
+}
 .photography-title {
     font-family: $bebas;
     font-size: 1.2rem;
     letter-spacing: 8px;
     color: lighten(grey,30%);
-    width: 95%;
+    width: auto;
     margin: $center;
 
     @include desktop {
         position: absolute;
-        top: 14.5%;
+        top: 10%;
         left: 17%;
         font-size: 3rem;
     }

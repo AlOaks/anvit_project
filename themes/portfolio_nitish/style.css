@@ -261,18 +261,21 @@ a {
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
-  margin: 0 auto 0 auto; }
+  position: absolute;
+  top: calc(50% - 15vh); }
   @media (min-width: 1080px) {
     .design-slider {
       max-width: 1000px;
-      height: 80vh; } }
+      height: 80vh;
+      position: relative;
+      margin: 0 auto 0 auto; } }
   .design-slider::-webkit-scrollbar {
     display: none; }
 
 .design-slide img {
   position: relative;
   max-height: 30vh;
-  max-width: 350px;
+  max-width: 370px;
   padding: 0 10px 0 10px; }
   @media (min-width: 1080px) {
     .design-slide img {
@@ -285,6 +288,24 @@ a {
 
 .n2-ss-slide-background-image {
   opacity: 1 !important; }
+
+.slider-btn-lft, .slider-btn-right {
+  background: none;
+  color: black;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-family: "Abel";
+  font-size: 3rem;
+  position: absolute;
+  z-index: 10;
+  top: calc(50% - 1rem); }
+
+.slider-btn-lft {
+  right: 0; }
+
+.slider-btn-right {
+  left: 0; }
 
 .site-info {
   display: -webkit-box;
@@ -425,7 +446,7 @@ a {
 
 .photos-container {
   width: 95%;
-  height: 80vh;
+  height: 77vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,17 +458,38 @@ a {
   .photos-container::-webkit-scrollbar {
     display: none; }
 
+.photoslider-btn-lft, .photoslider-btn-right {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-family: "Abel";
+  font-size: 3rem;
+  position: absolute;
+  z-index: 10;
+  top: calc(50% - 3rem); }
+
+.photoslider-btn-lft {
+  right: 0; }
+
+.photoslider-btn-right {
+  left: 0; }
+  @media (min-width: 1080px) {
+    .photoslider-btn-right {
+      left: 16%; } }
+
 .photography-title {
   font-family: "Bebas Neue";
   font-size: 1.2rem;
   letter-spacing: 8px;
   color: #cdcdcd;
-  width: 95%;
+  width: auto;
   margin: 0 auto 0 auto; }
   @media (min-width: 1080px) {
     .photography-title {
       position: absolute;
-      top: 14.5%;
+      top: 10%;
       left: 17%;
       font-size: 3rem; } }
 
@@ -535,6 +577,9 @@ a {
   @media (min-width: 1080px) {
     .tax-photo_types .site-info {
       position: fixed; } }
+
+.page-template-page-work-with-me .site-info {
+  position: relative; }
 
 .page-template-page-work-with-me fieldset {
   border: none; }
@@ -799,3 +844,101 @@ a {
 .single .post-navigation {
   font-family: "Abel";
   margin-left: 5%; }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  position: absolute;
+  top: 83%;
+  left: 40%;
+  width: 30%; }
+  @media (min-width: 1080px) {
+    input[type="range"] {
+      top: 92%; } }
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; }
+
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background: black;
+  cursor: pointer;
+  margin-top: -9px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */ }
+
+input[type=range]::-moz-range-thumb {
+  border: 1px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background: black;
+  cursor: pointer; }
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border: 1px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background: black;
+  cursor: pointer; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 1.3px;
+  border: .5px dotted #010101; }
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: transparent; }
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: .5px dotted #010101; }
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent; }
+
+input[type=range]::-ms-fill-lower {
+  background: transparent;
+  border: .5px dotted #010101;
+  border-radius: 2.6px; }
+
+input[type=range]:focus::-ms-fill-lower {
+  background: transparent; }
+
+input[type=range]::-ms-fill-upper {
+  background: transparent;
+  border: .5px dotted #010101;
+  border-radius: 2.6px; }
+
+input[type=range]:focus::-ms-fill-upper {
+  background: transparent; }
